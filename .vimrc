@@ -9,4 +9,3 @@ set autoindent
 set noerrorbells
 set nobackup
 set noswapfile
-set foldmethod=indent
