@@ -16,54 +16,56 @@ Plugin 'bling/vim-airline'
 
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'stephenmckinney/vim-solarized-powerline'
+Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'pearofducks/solarized-powerlines'
-
-Plugin 'kien/rainbow_parentheses.vim'
-
-Plugin 'scrooloose/syntastic'
-
-Plugin 'majutsushi/tagbar'
-
-Plugin 'ervandew/supertab'
-
-Plugin 'Valloric/YouCompleteMe'
-
-Plugin 'SirVer/ultisnips'
-
-Plugin 'honza/vim-snippets'
-
-Plugin 'fatih/vim-go'
-
-Plugin 'hari-rangarajan/CCTree'
-
-Plugin 'tpope/vim-surround'
-
-Plugin 'tpope/vim-commentary'
-
-Plugin 'craigemery/vim-autotag'
+"Plugin 'stephenmckinney/vim-solarized-powerline'
+"
+"Plugin 'pearofducks/solarized-powerlines'
+"
+"Plugin 'kien/rainbow_parentheses.vim'
+"
+"Plugin 'scrooloose/syntastic'
+"
+"Plugin 'majutsushi/tagbar'
+"
+"Plugin 'ervandew/supertab'
+"
+"Plugin 'Valloric/YouCompleteMe'
+"
+"Plugin 'SirVer/ultisnips'
+"
+"Plugin 'honza/vim-snippets'
+"
+"Plugin 'fatih/vim-go'
+"
+"Plugin 'hari-rangarajan/CCTree'
+"
+"Plugin 'tpope/vim-surround'
+"
+"Plugin 'tpope/vim-commentary'
+"
+"Plugin 'craigemery/vim-autotag'
 
 "  Parentheses colours using Solarized
-let g:rbpt_colorpairs = [
-			\ [ '13', '#6c71c4'],
-			\ [ '5',  '#d33682'],
-			\ [ '1',  '#dc322f'],
-			\ [ '9',  '#cb4b16'],
-			\ [ '3',  '#b58900'],
-			\ [ '2',  '#859900'],
-			\ [ '6',  '#2aa198'],
-			\ [ '4',  '#268bd2'],
-			\ ]
+"let g:rbpt_colorpairs = [
+"			\ [ '13', '#6c71c4'],
+"			\ [ '5',  '#d33682'],
+"			\ [ '1',  '#dc322f'],
+"			\ [ '9',  '#cb4b16'],
+"			\ [ '3',  '#b58900'],
+"			\ [ '2',  '#859900'],
+"			\ [ '6',  '#2aa198'],
+"			\ [ '4',  '#268bd2'],
+"			\ ]
 
 " Enable rainbow parentheses for all buffers
-augroup rainbow_parentheses
-	au!
-	au VimEnter * RainbowParenthesesActivate
-	au BufEnter * RainbowParenthesesLoadRound
-	au BufEnter * RainbowParenthesesLoadSquare
-	au BufEnter * RainbowParenthesesLoadBraces
-augroup END
+"augroup rainbow_parentheses
+"	au!
+"	au VimEnter * RainbowParenthesesActivate
+"	au BufEnter * RainbowParenthesesLoadRound
+"	au BufEnter * RainbowParenthesesLoadSquare
+"	au BufEnter * RainbowParenthesesLoadBraces
+"augroup END
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -144,17 +146,18 @@ set shiftwidth=4
 set expandtab
 set cino+=(0
 
-let g:Powerline_colorscheme='solarized16_dark'
-let g:Powerline_symbols='fancy'
-let g:airline_powerline_fonts=1
+
+"let g:Powerline_colorscheme='solarized16_dark'
+"let g:Powerline_symbols='fancy'
+"let g:airline_powerline_fonts=1
 
 
-let g:syntastic_c_compiler='gcc'
-let g:syntastic_cpp_compiler='g++-4.9'
-let g:syntastic_cpp_compiler_options='-std=c++11 -march=core-avx2'
-let g:syntastic_c_compiler_options='-march=core-avx2'
-let g:syntastic_cuda_check_header = 1
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"let g:syntastic_c_compiler='gcc'
+"let g:syntastic_cpp_compiler='g++-4.9'
+"let g:syntastic_cpp_compiler_options='-std=c++11 -march=core-avx2'
+"let g:syntastic_c_compiler_options='-march=core-avx2'
+"let g:syntastic_cuda_check_header = 1
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -188,69 +191,69 @@ autocmd Filetype python set expandtab
 " let g:UltiSnipsExpandTrigger="<c-l>"
 
 " this mapping Enter key to <C-y> to chose the current highlight item
-" and close the selection list, same as other IDEs. 
-" CONFLICT with some plugins like tpope/Endwise 
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>":"\<C-g>u\<CR>"
 
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<c-j>"
-let g:UltiSnipsJumpForwardTrigger = "<c-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+"let g:UltiSnipsExpandTrigger = "<c-j>"
+"let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " VIMGO
-au FileType go nmap <Leader>e <Plug>(go-rename)
+"au FileType go nmap <Leader>e <Plug>(go-rename)
 " au FileType go set gofmt_command goimports
 
 
 " GCC MACRO EXPANSION
 
-function! ExpandCMacro()
-  "get current info
-  let l:macro_file_name = "__macroexpand__" . tabpagenr()
-  let l:file_row = line(".")
-  let l:file_name = expand("%")
-  let l:file_window = winnr()
-  "create mark
-  execute "normal! Oint " . l:macro_file_name . ";"
-  execute "w"
-  "open tiny window ... check if we have already an open buffer for macro
-  if bufwinnr( l:macro_file_name ) != -1
-    execute bufwinnr( l:macro_file_name) . "wincmd w"
-    setlocal modifiable
-    execute "normal! ggdG"
-  else
-    execute "bot 10split " . l:macro_file_name
-    execute "setlocal filetype=cpp"
-    execute "setlocal buftype=nofile"
-    nnoremap <buffer> q :q!<CR>
-  endif
-  "read file with gcc
-  silent! execute "r!gcc -E " . l:file_name
-  "keep specific macro line
-  execute "normal! ggV/int " . l:macro_file_name . ";$\<CR>d"
-  execute "normal! jdG"
-  "indent
-  execute "%!indent -st -kr"
-  execute "normal! gg=G"
-  "resize window
-  execute "normal! G"
-  let l:macro_end_row = line(".")
-  execute "resize " . l:macro_end_row
-  execute "normal! gg"
-  "no modifiable
-  setlocal nomodifiable
-  "return to origin place
-  execute l:file_window . "wincmd w"
-  execute l:file_row
-  execute "normal!u"
-  execute "w"
-  "highlight origin line
-  let @/ = getline('.')
-endfunction
+"function! ExpandCMacro()
+"  "get current info
+"  let l:macro_file_name = "__macroexpand__" . tabpagenr()
+"  let l:file_row = line(".")
+"  let l:file_name = expand("%")
+"  let l:file_window = winnr()
+"  "create mark
+"  execute "normal! Oint " . l:macro_file_name . ";"
+"  execute "w"
+"  "open tiny window ... check if we have already an open buffer for macro
+"  if bufwinnr( l:macro_file_name ) != -1
+"    execute bufwinnr( l:macro_file_name) . "wincmd w"
+"    setlocal modifiable
+"    execute "normal! ggdG"
+"  else
+"    execute "bot 10split " . l:macro_file_name
+"    execute "setlocal filetype=cpp"
+"    execute "setlocal buftype=nofile"
+"    nnoremap <buffer> q :q!<CR>
+"  endif
+"  "read file with gcc
+"  silent! execute "r!gcc -E " . l:file_name
+"  "keep specific macro line
+"  execute "normal! ggV/int " . l:macro_file_name . ";$\<CR>d"
+"  execute "normal! jdG"
+"  "indent
+"  execute "%!indent -st -kr"
+"  execute "normal! gg=G"
+"  "resize window
+"  execute "normal! G"
+"  let l:macro_end_row = line(".")
+"  execute "resize " . l:macro_end_row
+"  execute "normal! gg"
+"  "no modifiable
+"  setlocal nomodifiable
+"  "return to origin place
+"  execute l:file_window . "wincmd w"
+"  execute l:file_row
+"  execute "normal!u"
+"  execute "w"
+"  "highlight origin line
+"  let @/ = getline('.')
+"endfunction
 
 
