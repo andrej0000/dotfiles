@@ -22,20 +22,52 @@ Plugin 'vim-airline/vim-airline-themes'
 "
 "Plugin 'pearofducks/solarized-powerlines'
 "
-"Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+"  Parentheses colours using Solarized
+let g:rbpt_colorpairs = [
+			\ [ '13', '#6c71c4'],
+			\ [ '5',  '#d33682'],
+			\ [ '1',  '#dc322f'],
+			\ [ '9',  '#cb4b16'],
+			\ [ '3',  '#b58900'],
+			\ [ '2',  '#859900'],
+			\ [ '6',  '#2aa198'],
+			\ [ '4',  '#268bd2'],
+			\ ]
+
+" Enable rainbow parentheses for all buffers
+augroup rainbow_parentheses
+	au!
+	au VimEnter * RainbowParenthesesActivate
+	au BufEnter * RainbowParenthesesLoadRound
+	au BufEnter * RainbowParenthesesLoadSquare
+	au BufEnter * RainbowParenthesesLoadBraces
+augroup END
+
 "
 "Plugin 'scrooloose/syntastic'
 "
-"Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_key_list_select_completion   = ['<tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
 "
-"Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
 "
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 "
-"Plugin 'SirVer/ultisnips'
+" Snippets for ultisnips
+Plugin 'honza/vim-snippets'
 "
-"Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/nerdtree'
+let g:NERDTreeWinSize=45
 "
+Plugin 'majutsushi/tagbar'
+let g:tagbar_width=45
 "Plugin 'fatih/vim-go'
 "
 "Plugin 'hari-rangarajan/CCTree'
@@ -44,28 +76,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "
 "Plugin 'tpope/vim-commentary'
 "
-"Plugin 'craigemery/vim-autotag'
-
-"  Parentheses colours using Solarized
-"let g:rbpt_colorpairs = [
-"			\ [ '13', '#6c71c4'],
-"			\ [ '5',  '#d33682'],
-"			\ [ '1',  '#dc322f'],
-"			\ [ '9',  '#cb4b16'],
-"			\ [ '3',  '#b58900'],
-"			\ [ '2',  '#859900'],
-"			\ [ '6',  '#2aa198'],
-"			\ [ '4',  '#268bd2'],
-"			\ ]
-
-" Enable rainbow parentheses for all buffers
-"augroup rainbow_parentheses
-"	au!
-"	au VimEnter * RainbowParenthesesActivate
-"	au BufEnter * RainbowParenthesesLoadRound
-"	au BufEnter * RainbowParenthesesLoadSquare
-"	au BufEnter * RainbowParenthesesLoadBraces
-"augroup END
+Plugin 'craigemery/vim-autotag'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -98,6 +109,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+au! BufRead,BufNewFile *.cu set filetype=cuda
 au! BufRead,BufNewFile *.cuh set filetype=cuda
 
 
@@ -115,6 +127,12 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 nmap <F8> :TagbarToggle<CR>
+
+map <F7> :NERDTreeToggle<CR>
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 
 " inoremap k <Up>
 " inoremap j <Down>
@@ -148,8 +166,8 @@ set cino+=(0
 
 
 "let g:Powerline_colorscheme='solarized16_dark'
-"let g:Powerline_symbols='fancy'
-"let g:airline_powerline_fonts=1
+let g:Powerline_symbols='fancy'
+let g:airline_powerline_fonts=1
 
 
 "let g:syntastic_c_compiler='gcc'
