@@ -78,6 +78,8 @@ let g:tagbar_width=45
 "
 Plugin 'craigemery/vim-autotag'
 
+Plugin 'tpope/vim-fugitive'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
