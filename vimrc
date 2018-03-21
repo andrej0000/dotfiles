@@ -21,6 +21,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'flazz/vim-colorschemes'
+
 "Plugin 'stephenmckinney/vim-solarized-powerline'
 "
 "Plugin 'pearofducks/solarized-powerlines'
@@ -152,7 +154,7 @@ nnoremap <S-Tab> :bprevious<CR>
 
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 highlight ExtraWhitespaces ctermbg=red guibg=red
 match ExtraWhitespaces /\s\+$\| \+\ze\t/
 set number
