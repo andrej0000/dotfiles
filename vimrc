@@ -154,7 +154,7 @@ nnoremap <S-Tab> :bprevious<CR>
 
 syntax on
 set background=dark
-colorscheme hybrid
+colorscheme solarized
 highlight ExtraWhitespaces ctermbg=red guibg=red
 match ExtraWhitespaces /\s\+$\| \+\ze\t/
 set number
