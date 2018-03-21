@@ -4,6 +4,7 @@ filetype off                  " required
 set encoding=utf-8
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -17,6 +18,8 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'christoomey/vim-tmux-navigator'
 
 "Plugin 'stephenmckinney/vim-solarized-powerline'
 "
@@ -118,6 +121,12 @@ au! BufRead,BufNewFile *.cuh set filetype=cuda
 nnoremap <C-t> :pop<CR>
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" Ctrl-HJKL for movement between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
