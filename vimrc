@@ -13,6 +13,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'keith/tmux.vim'
+
 Plugin 'bling/vim-airline'
 
 Plugin 'altercation/vim-colors-solarized'
