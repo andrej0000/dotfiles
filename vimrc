@@ -13,6 +13,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'keith/tmux.vim'
+
 Plugin 'bling/vim-airline'
 
 Plugin 'altercation/vim-colors-solarized'
@@ -167,6 +169,12 @@ map <F7> :NERDTreeToggle<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+nnoremap <Leader>s :Gstatus<CR>
+nnoremap <Leader>d :Gdiff<CR>
+nnoremap <Leader>p :diffput<CR>
+nnoremap <Leader>g :diffget<CR>
 
 " inoremap k <Up>
 " inoremap j <Down>
