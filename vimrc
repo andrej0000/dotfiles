@@ -104,6 +104,8 @@ Plugin 'craigemery/vim-autotag'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'morhetz/gruvbox'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -173,7 +175,8 @@ nnoremap <S-Tab> :bprevious<CR>
 
 syntax on
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme gruvbox
 highlight ExtraWhitespaces ctermbg=red guibg=red
 match ExtraWhitespaces /\s\+$\| \+\ze\t/
 set number
