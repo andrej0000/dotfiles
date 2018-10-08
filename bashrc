@@ -216,12 +216,12 @@ export P4CLIENT=asulecki-ssd
 
 alias cudatags='ctags --langmap=C++:+.cu *'
 
-eval `dircolors /home/asulecki/setup/gnome-terminal-colors-solarized/dircolors`
+#eval `dircolors /home/asulecki/setup/gnome-terminal-colors-solarized/dircolors`
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /home/asulecki/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /home/asulecki/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 alias ssdp4='source ~/ssdperforce.sh'
 alias oldp4='source ~/oldperforce.sh'

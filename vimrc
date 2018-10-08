@@ -210,8 +210,8 @@ set expandtab
 set cino+=(0
 
 
-"let g:Powerline_colorscheme='solarized16_dark'
-"let g:Powerline_symbols='fancy'
+let g:Powerline_colorscheme='solarized16_dark'
+let g:Powerline_symbols='fancy'
 let g:airline_powerline_fonts=0
 
 
