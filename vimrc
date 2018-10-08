@@ -106,7 +106,7 @@ Plugin 'craigemery/vim-autotag'
 
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'morhetz/gruvbox'
+"Plugin 'morhetz/gruvbox'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -183,8 +183,8 @@ nnoremap <Leader>g :diffget<CR>
 
 syntax on
 set background=dark
-"colorscheme solarized
-colorscheme gruvbox
+colorscheme solarized
+"colorscheme gruvbox
 highlight ExtraWhitespaces ctermbg=red guibg=red
 match ExtraWhitespaces /\s\+$\| \+\ze\t/
 set number
@@ -208,7 +208,7 @@ set expandtab
 set cino+=(0
 
 
-"let g:Powerline_colorscheme='solarized16_dark'
+let g:Powerline_colorscheme='solarized16_dark'
 let g:Powerline_symbols='fancy'
 let g:airline_powerline_fonts=1
 
