@@ -27,6 +27,8 @@ Plugin 'junegunn/fzf.vim'
 
 Plugin 'kalekundert/vim-coiled-snake'
 
+Plugin 'w0rp/ale'
+
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -108,6 +110,8 @@ Plugin 'craigemery/vim-autotag'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'tpope/vim-unimpaired'
+
 "Plugin 'morhetz/gruvbox'
 
 " The following are examples of different formats supported.
@@ -177,6 +181,11 @@ nnoremap <Leader>s :Gstatus<CR>
 nnoremap <Leader>d :Gdiff<CR>
 nnoremap <Leader>p :diffput<CR>
 nnoremap <Leader>g :diffget<CR>
+
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>l :Lines<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>t :Tags<CR>
 
 " inoremap k <Up>
 " inoremap j <Down>
